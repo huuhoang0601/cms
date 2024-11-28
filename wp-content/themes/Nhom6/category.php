@@ -1,8 +1,7 @@
 <?php get_header() ?>
 
-<?php get_template_part('content/top-header'); ?>
 
-<div class="container-fluid fruite py-5">
+<div class="container-fluid fruite py-5 mt-5">
     <div class="container py-5">
         <div class="row">
             <div class="col-lg-12">

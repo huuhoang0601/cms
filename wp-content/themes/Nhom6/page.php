@@ -1,6 +1,6 @@
 <?php get_header(); ?>
-<?php get_template_part('content/top-header'); ?>
-<section class="bg-light py-5">
+
+<section class="bg-light py-5 mt-5">
     <div class="container">
         <div class="row justify-content-center mt-5">
             <div class="col-md-10 col-lg-9 mb-4">

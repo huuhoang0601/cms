@@ -5,9 +5,8 @@ Template Name: Template sản phẩm khuyến mãi
 get_header();
 ?>
 
-<?php get_template_part('content/top-header'); ?>
 
-<div class="container-fluid py-5">
+<div class="container-fluid py-5 mt-5">
     <div class="container py-5">
         <div class="row g-4 align-items-center">
         </div>

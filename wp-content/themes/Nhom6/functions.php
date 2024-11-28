@@ -1,7 +1,7 @@
 <?php
 require_once get_template_directory() . '/inc/class-custom-walker-nav-menu.php';
 
-add_action(hook_name: "wp_enqueue_scripts", callback: "loadCSSandJS");
+add_action("wp_enqueue_scripts", "loadCSSandJS");
 
 function loadCSSandJS(): void
 {

@@ -5,11 +5,11 @@
 <body <?php body_class(); ?>>
 
     <!-- Navbar start -->
-    <div class="container-fluid fixed-top mt-5">
+    <div class="container-fluid fixed-top mt-4">
         <div class="container px-0">
             <nav class="navbar navbar-light bg-white navbar-expand-xl">
                 <a href="<?php echo home_url('/'); ?>" class="navbar-brand" alt="<?php bloginfo('name'); ?>">
-                    <h1 class="text-primary display-6">
+                    <h1 class="text-dark display-6">
                         <?php echo esc_html(get_theme_mod('site_custom_name', get_bloginfo('name'))); ?>
                     </h1>
                 </a>
@@ -32,13 +32,13 @@
 
 
                         <a href="<?php bloginfo('url'); ?>/gio-hang " class="position-relative me-4 my-auto">
-                            <i class="fa fa-shopping-bag fa-2x"></i>
+                            <i class="fa fa-shopping-bag fa-2x" style="color: #45595b"></i>
                             <span
-                                class="position-absolute bg-secondary rounded-circle d-flex align-items-center justify-content-center text-dark px-1"
+                                class="position-absolute bg-dark rounded-circle d-flex align-items-center justify-content-center text-white px-1"
                                 style="top: -5px; left: 15px; height: 20px; min-width: 20px;"><?php echo WC()->cart->get_cart_contents_count(); ?></span>
                         </a>
                         <a href="<?php bloginfo('url'); ?>/tai-khoan" class="my-auto">
-                        <i class="fas fa-user-circle fa-2x"></i>
+                        <i class="fas fa-user fa-2x" style="color: #45595b"></i>
                         </a>
                     </div>
                 </div>

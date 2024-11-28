@@ -4,8 +4,6 @@
 // Template name: Template Liên hệ
 ?>
 
-<?php get_template_part('content/top-header'); ?>
-
 <!-- Contact Start -->
 <div class="container-fluid contact py-5">
     <div class="container py-5">
@@ -13,8 +11,7 @@
             <div class="row g-4">
                 <div class="col-12">
                     <div class="text-center mx-auto" style="max-width: 700px;">
-                        <h1 class="text-primary">Bạn tò mò về Fruitables?</h1>
-                        <h4 class="mb-4">Hãy chia sẻ với chúng tôi về tất cả những gì bạn cần nhé. Chúng tôi sẽ liên hệ lại với bạn!</h4>
+                        <h1 class="text-dark">Hãy liên hệ ngay với chúng tôi để được tư vấn chi tiết và giải đáp mọi thắc mắc!</h1>
                     </div>
                 </div>
                 <div class="col-lg-12">
@@ -25,34 +22,28 @@
                     </div>
                 </div>
                 <div class="col-lg-7">
-                    <!-- <form action="" class="">
-                                <input type="text" class="w-100 form-control border-0 py-3 mb-4" placeholder="Your Name">
-                                <input type="email" class="w-100 form-control border-0 py-3 mb-4" placeholder="Enter Your Email">
-                                <textarea class="w-100 form-control border-0 mb-4" rows="5" cols="10" placeholder="Your Message"></textarea>
-                                <button class="w-100 btn form-control border-secondary py-3 bg-white text-primary " type="submit">Submit</button>
-                            </form> -->
                     <?php echo do_shortcode('[wpforms id="159"]'); ?>
                 </div>
                 <div class="col-lg-5">
                     <div class="d-flex p-4 rounded mb-4 bg-white">
-                        <i class="fas fa-map-marker-alt fa-2x text-primary me-4"></i>
+                        <i class="fas fa-map-marker-alt fa-2x text-dark me-4"></i>
                         <div>
                             <h4>Địa chỉ</h4>
-                            <p class="mb-2">420a Nơ Trang Long, F13, Quận Bình Thạnh</p>
+                            <p class="mb-2">53 Võ Văn Ngân, Linh Chiểu, Thủ Đức, TP.HCM</p>
                         </div>
                     </div>
                     <div class="d-flex p-4 rounded mb-4 bg-white">
-                        <i class="fas fa-envelope fa-2x text-primary me-4"></i>
+                        <i class="fas fa-envelope fa-2x text-dark me-4"></i>
                         <div>
                             <h4>Email</h4>
-                            <p class="mb-2">nguyenhieunghia2004@gmail.com</p>
+                            <p class="mb-2">22211tt0579@mail.tdc.edu.vn</p>
                         </div>
                     </div>
                     <div class="d-flex p-4 rounded bg-white">
-                        <i class="fa fa-phone-alt fa-2x text-primary me-4"></i>
+                        <i class="fa fa-phone-alt fa-2x text-dark me-4"></i>
                         <div>
                             <h4>Số điện thoại</h4>
-                            <p class="mb-2">(+012) 3456 7890</p>
+                            <p class="mb-2">(+84) 123 456 789</p>
                         </div>
                     </div>
                 </div>

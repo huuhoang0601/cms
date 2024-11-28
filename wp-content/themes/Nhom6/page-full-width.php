@@ -4,8 +4,7 @@
     // Template name: Page full width
 ?>
 
-<?php get_template_part('content/top-header'); ?>
-<section class="bg-light py-5">
+<section class="bg-light py-5 mt-5">
     <div class="container">
         <div class="row justify-content-center mt-5">
             <div class="col-md-12 col-lg-12 mb-4">
