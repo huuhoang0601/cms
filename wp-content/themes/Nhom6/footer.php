@@ -63,6 +63,36 @@ var Tawk_API = Tawk_API || {},
     s0.parentNode.insertBefore(s1, s0);
 })();
 </script>
+<script>
+    jQuery(document).ready(function($) {
+    // Khi người dùng chọn danh mục hoặc "All"
+    $('.featured__controls li').click(function() {
+        var categorySlug = $(this).data('filter'); // Lấy slug của danh mục
+        if (categorySlug === '*') {
+            categorySlug = ''; // Nếu chọn "All", lấy tất cả sản phẩm
+        }
+
+        // Thêm class 'active' cho item được chọn và bỏ active cho các item còn lại
+        $('.featured__controls li').removeClass('active');
+        $(this).addClass('active');
+
+        // Gửi yêu cầu AJAX để lọc sản phẩm theo danh mục hoặc tất cả sản phẩm
+        $.ajax({
+            url: '<?php echo admin_url('admin-ajax.php'); ?>',
+            type: 'POST',
+            data: {
+                action: 'filter_products_by_category', // Đảm bảo action đúng
+                category_slug: categorySlug
+            },
+            success: function(response) {
+                // Xóa nội dung cũ và thêm sản phẩm mới vào
+                $('#product-list').html(response);
+            }
+        });
+    });
+});
+
+</script>
 <!--End of Tawk.to Script-->
 <?php wp_footer() ?>
 </body>

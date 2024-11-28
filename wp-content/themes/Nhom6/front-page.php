@@ -26,30 +26,56 @@
     <div class="container py-5">
         <div class="row g-4 align-items-center">
             <div class="text-center mx-auto mb-5" style="max-width: 700px;">
-                <h1 class="display-4">Sản phẩm bán chạy</h1>
+                <div class="featured__controls">
+                <ul>
+    <li class="active" data-filter="">Tất cả</li>
+    <?php
+    // Hiển thị danh mục cha
+    $taxonomy = 'product_cat';
+    $args = array(
+        'taxonomy'     => $taxonomy,
+        'orderby'      => 'name',
+        'hierarchical' => true,
+        'parent'       => 0, // Chỉ lấy danh mục cha
+    );
+
+    $categories = get_categories($args);
+    foreach ($categories as $category) : ?>
+        <li data-filter="<?php echo esc_attr($category->slug); ?>">
+            <?php echo esc_html($category->name); ?>
+        </li>
+    <?php endforeach; ?>
+</ul>
+
+
+                </div>
+
+                <h1 class="display-4">Sản phẩm nổi bật</h1>
             </div>
         </div>
-        <div class="row g-4">
+
+        <!-- Đây là phần hiển thị sản phẩm, sau khi AJAX được gọi sẽ được cập nhật -->
+        <div class="row g-4" id="product-list">
             <?php
+            // Mặc định hiển thị sản phẩm bán chạy (tất cả sản phẩm)
             $tax_query[] = array(
                 'taxonomy' => 'product_visibility',
                 'field' => 'name',
                 'terms' => 'featured',
                 'operator' => 'IN',
             );
+            $args = array('post_type' => 'product', 'posts_per_page' => 8, 'ignore_sticky_posts' => 1, 'tax_query' => $tax_query);
+            $getposts = new WP_query($args);
+            while ($getposts->have_posts()):
+                $getposts->the_post();
             ?>
-            <?php $args = array('post_type' => 'product', 'posts_per_page' => 8, 'ignore_sticky_posts' => 1, 'tax_query' => $tax_query); ?>
-            <?php $getposts = new WP_query($args); ?>
-            <?php global $wp_query;
-            $wp_query->in_the_loop = true; ?>
-            <?php while ($getposts->have_posts()):
-                $getposts->the_post(); ?>
                 <div class="col-md-6 col-lg-4 col-xl-3">
                     <?php get_template_part('content/product_item'); ?>
                 </div>
             <?php endwhile;
             wp_reset_postdata(); ?>
         </div>
+
     </div>
 </div>
 

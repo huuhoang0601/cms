@@ -304,10 +304,7 @@ add_filter('woocommerce_add_to_cart_redirect', 'redirect_to_cart_after_add_to_ca
 
 function theme_customize_register($wp_customize) {
     // Thêm section cho Top Header
-    $wp_customize->add_section('top_header_section', array(
-        'title'       => __('Top Header', 'nhom6'),
-        'priority'    => 30,
-    ));
+   
 
     // Thêm cài đặt cho Địa chỉ
     $wp_customize->add_setting('top_header_address', array(
@@ -443,3 +440,70 @@ function theme_customize_register_map($wp_customize) {
     ));
 }
 add_action('customize_register', 'theme_customize_register_map');
+
+
+
+
+
+
+function filter_products_by_category() {
+    if (isset($_POST['category_slug'])) {
+        $category_slug = sanitize_text_field($_POST['category_slug']);
+
+        if ($category_slug == '') {
+            // Nếu không chọn danh mục nào (hiển thị tất cả)
+            $tax_query = array(
+                array(
+                    'taxonomy' => 'product_visibility',
+                    'field'    => 'name',
+                    'terms'    => 'featured',
+                    'operator' => 'IN',
+                ),
+            );
+        } else {
+            // Nếu chọn danh mục cha
+            $tax_query = array(
+                'relation' => 'AND', // Quan hệ giữa các điều kiện
+                array(
+                    'taxonomy'         => 'product_cat',
+                    'field'            => 'slug',
+                    'terms'            => $category_slug,
+                    'operator'         => 'IN',
+                    'include_children' => true, // Lấy cả danh mục con
+                ),
+                array(
+                    'taxonomy' => 'product_visibility',
+                    'field'    => 'name',
+                    'terms'    => 'featured',
+                    'operator' => 'IN',
+                ),
+            );
+        }
+
+        // Truy vấn sản phẩm
+        $args = array(
+            'post_type'           => 'product',
+            'posts_per_page'      => 8,
+            'ignore_sticky_posts' => 1,
+            'tax_query'           => $tax_query,
+        );
+        $getposts = new WP_Query($args);
+
+        if ($getposts->have_posts()) :
+            while ($getposts->have_posts()) : $getposts->the_post();
+                ?>
+                <div class="col-md-6 col-lg-4 col-xl-3">
+                    <?php get_template_part('content/product_item'); ?>
+                </div>
+                <?php
+            endwhile;
+        else :
+            echo 'Không có sản phẩm nào trong danh mục này.';
+        endif;
+
+        wp_reset_postdata(); // Reset lại dữ liệu sau khi truy vấn
+    }
+    die(); // Kết thúc AJAX request
+}
+add_action('wp_ajax_filter_products_by_category', 'filter_products_by_category');
+add_action('wp_ajax_nopriv_filter_products_by_category', 'filter_products_by_category');

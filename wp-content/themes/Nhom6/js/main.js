@@ -21,7 +21,7 @@
       }
     } else {
       if ($(this).scrollTop() > 55) {
-        $(".fixed-top").addClass("shadow").css("top", -55);
+        $(".fixed-top").addClass("shadow").css("top", -120);
       } else {
         $(".fixed-top").removeClass("shadow").css("top", 0);
       }
