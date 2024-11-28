@@ -112,15 +112,15 @@ body {
 .topbar .top-link a {
   letter-spacing: 1px;
 }
+.cate-parent {
+  color: #000;
+}
 
 .topbar .top-link a small:hover {
-  color: var(--bs-secondary) !important;
+  color: #000 !important;
   transition: 0.5s;
 }
 
-.topbar .top-link a small:hover i {
-  color: var(--bs-primary) !important;
-}
 /*** Topbar End ***/
 
 /*** Navbar Start ***/
@@ -300,7 +300,7 @@ body {
 }
 
 .fruite .fruite-categorie .fruite-name a:hover {
-  color: var(--bs-secondary);
+  color: #000;
 }
 
 .fruite .fruite-item {
@@ -461,18 +461,18 @@ body {
   padding: 10px 16px;
   text-decoration: none;
   transition: 0.5s;
-  border: 1px solid var(--bs-secondary);
+  border: 1px solid #000;
   margin: 0 4px;
 }
 
 .pagination a.active {
   background-color: var(--bs-primary);
   color: var(--bs-light);
-  border: 1px solid var(--bs-secondary);
+  border: 1px solid #000;
 }
 
 .pagination a:hover:not(.active) {
-  background-color: var(--bs-primary);
+  background-color: #45595b;
 }
 
 .nav.nav-tabs .nav-link.active {

@@ -64,7 +64,7 @@
                             <input class="form-control mb-3" type="text" name="name" placeholder="Name*">
                             <input class="form-control mb-3" type="text" name="email" placeholder="Email*">
                             <input class="form-control mb-3" type="text" name="website" placeholder="Website">
-                            <button class="btn btn-primary mt-3 text-light" type="submit">
+                            <button class="btn btn-dark mt-3 text-light" type="submit">
                                 Post Comment
                             </button>
                         </form>

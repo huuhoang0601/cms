@@ -19,7 +19,7 @@
                                                     <img src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'full'); ?>" class="img-fluid rounded-top" alt="<?php the_title(); ?>">
                                                 </a>
                                             </div>
-                                            <div class="p-2 border border-secondary border-top-0 rounded-bottom content-wrap">
+                                            <div class="p-2 border border-dark border-top-0 rounded-bottom content-wrap">
                                                 <a href="<?php the_permalink(); ?>">
                                                     <h4 class="post_title"><?php the_title(); ?></h4>
                                                 </a>
@@ -28,7 +28,7 @@
                                                     ?>
                                                 </div>
                                                 <div class="d-flex justify-content-start flex-lg-wrap">
-                                                    <a href="<?php the_permalink(); ?>" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-eye me-2 text-primary"></i>Đọc tiếp</a>
+                                                    <a href="<?php the_permalink(); ?>" class="btn btn-dark btn-read-more px-3 text-white"><i class="fa fa-eye me-2 text-white"></i>Đọc tiếp</a>
                                                 </div>
                                             </div>
                                         </div>

@@ -38,7 +38,7 @@
                          <a
                              class="nav-link collapsed d-flex justify-content-start fruite-name px-0 py-0"
                              href="<?php echo get_term_link($category->slug, 'product_cat'); ?>">
-                             <span class="cate-parent"><i class="fas fa-chevron-right me-2"></i><?php echo $category->name; ?></span>
+                             <span class="cate-parent"><?php echo $category->name; ?></span>
                          </a>
                          <div class="bg-white collapse-inner px-3 py-1 cate-child">
                              <?php foreach ($child_categories as $child) { ?>
