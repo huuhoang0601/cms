@@ -6,9 +6,9 @@ add_action(hook_name: "wp_enqueue_scripts", callback: "loadCSSandJS");
 function loadCSSandJS(): void
 {
     // -----------------------LOAD CSS-----------------------
+    wp_enqueue_style('bootstrap_css', get_theme_file_uri("/css/bootstrap.min.css"));
     wp_enqueue_style('main_css', get_theme_file_uri("/css/style.css"));
     wp_enqueue_style('child_css', get_theme_file_uri("/css/child.css"));
-    wp_enqueue_style('bootstrap_css', get_theme_file_uri("/css/bootstrap.min.css"));
     wp_enqueue_style('fa_font1', 'https://use.fontawesome.com/releases/v5.15.4/css/all.css');
     wp_enqueue_style('bootstrap_icon', 'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css');
     wp_enqueue_style('fa_font2', 'https://fonts.googleapis.com');
