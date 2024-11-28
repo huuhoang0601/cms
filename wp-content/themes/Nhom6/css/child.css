@@ -74,6 +74,33 @@ nav.woocommerce-pagination {
   color: var(--bs-primary);
 }
 
+.woocommerce-table__product-name a {
+  color: #000;
+  font-weight: bold;
+}
+
+.woocommerce-cart-form__cart-item .product-name a {
+  color:#000;
+  font-weight: bold;
+}
+
+.shipping-calculator-button {
+  color: #293738;
+  font-weight: bold;
+}
+.shipping-calculator-button:hover {
+  color: #000;
+  font-weight: bold;
+}
+#coupon_code {
+  width: 120px;
+}
+.woocommerce-remove-coupon {
+  color: red;
+}
+.woocommerce-remove-coupon:hover {
+  color: red;
+}
 /* end custom css woocommerce */
 
 span.breadcrumb_last {
