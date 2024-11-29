@@ -39,8 +39,7 @@ function register_menus()
 {
     register_nav_menus(
         array(
-            'menu-1' => esc_html__('Primary', 'Fruitables'),
-            'top-menu' => esc_html__('Top Menu', 'Fruitables')
+            'menu-1' => esc_html__('Primary', 'ShopNhom6'),
 
         )
     );
@@ -215,6 +214,8 @@ function custom_no_products_found_message()
     return '<div class="woocommerce-info">Không có sản phẩm nào phù hợp với tìm kiếm của bạn. Hãy thử lại với các tiêu chí khác!</div>';
 }
 add_filter('woocommerce_no_products_found', 'custom_no_products_found_message');
+
+
 // Thêm dropdown để thay đổi số lượng sản phẩm mỗi trang
 function custom_per_page_dropdown()
 {
@@ -222,9 +223,9 @@ function custom_per_page_dropdown()
 ?>
         <form method="GET" class="products-per-page">
             <select name="per_page" onchange="this.form.submit()">
-                <option value="5" <?php selected(get_query_var('posts_per_page'), 5); ?>>5 Sản phẩm mỗi trang</option>
-                <option value="10" <?php selected(get_query_var('posts_per_page'), 10); ?>>10 Sản phẩm mỗi trang</option>
-                <option value="20" <?php selected(get_query_var('posts_per_page'), 20); ?>>20 Sản phẩm mỗi trang</option>
+                <option value="6" <?php selected(get_query_var('posts_per_page'), 6); ?>>6 Sản phẩm</option>
+                <option value="12" <?php selected(get_query_var('posts_per_page'), 12); ?>>12 Sản phẩm</option>
+                <option value="18" <?php selected(get_query_var('posts_per_page'), 18); ?>>18 Sản phẩm</option>
             </select>
         </form>
 <?php
@@ -334,6 +335,8 @@ function theme_customize_register($wp_customize) {
 }
 add_action('customize_register', 'theme_customize_register');
 
+
+// Banner
 function theme_customize_register_banner($wp_customize) {
     // Thêm section cho Banner
     $wp_customize->add_section('banner_section', array(

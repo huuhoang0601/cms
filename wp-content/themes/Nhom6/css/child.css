@@ -80,7 +80,7 @@ nav.woocommerce-pagination {
 }
 
 .woocommerce-cart-form__cart-item .product-name a {
-  color:#000;
+  color: #000;
   font-weight: bold;
 }
 
@@ -88,19 +88,24 @@ nav.woocommerce-pagination {
   color: #293738;
   font-weight: bold;
 }
+
 .shipping-calculator-button:hover {
   color: #000;
   font-weight: bold;
 }
+
 #coupon_code {
   width: 120px;
 }
+
 .woocommerce-remove-coupon {
   color: red;
 }
+
 .woocommerce-remove-coupon:hover {
   color: red;
 }
+
 /* end custom css woocommerce */
 
 span.breadcrumb_last {
@@ -183,7 +188,7 @@ button#wpforms-submit-159:hover {
   text-overflow: ellipsis;
 }
 
-.fruite-name .cate-child {
+.shop-name .cate-child {
   opacity: 0;
   /* Ẩn danh mục con */
   max-height: 0;
@@ -194,7 +199,7 @@ button#wpforms-submit-159:hover {
   /* Thêm transition */
 }
 
-.fruite-name:hover .cate-child {
+.shop-name:hover .cate-child {
   opacity: 1;
   /* Hiển thị danh mục con */
   max-height: 500px;
@@ -223,7 +228,7 @@ button#wpforms-submit-159:hover {
   text-decoration: none;
 }
 
-.best-sell-fruite-img {
+.best-sell-shop-img {
   border: 1px solid var(--bs-primary);
 }
 
@@ -240,7 +245,7 @@ button#wpforms-submit-159:hover {
   text-overflow: ellipsis;
 }
 
-.best-sell-fruite-img .img-fluid {
+.best-sell-shop-img .img-fluid {
   height: 350px;
   overflow: hidden;
   object-fit: contain;
@@ -317,36 +322,332 @@ ul.ssbp-list li p {
 
 /*  */
 .featured__controls {
-	text-align: center;
-	margin-bottom: 50px;
+  text-align: center;
+  margin-bottom: 50px;
 }
 
 .featured__controls ul li {
-	list-style: none;
-	font-size: 25px;
-	color: #1c1c1c;
-	display: inline-block;
-	margin-right: 25px;
-	position: relative;
-	cursor: pointer;
+  list-style: none;
+  font-size: 25px;
+  color: #1c1c1c;
+  display: inline-block;
+  margin-right: 25px;
+  position: relative;
+  cursor: pointer;
   font-weight: bold;
 }
 
 .featured__controls ul li.active:after {
-	opacity: 1;
+  opacity: 1;
 }
 
 .featured__controls ul li:after {
-	position: absolute;
-	left: 0;
-	bottom: -2px;
-	width: 100%;
-	height: 2px;
-	background: #7fad39;
-	content: "";
-	opacity: 0;
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 2px;
+  background: #7fad39;
+  content: "";
+  opacity: 0;
 }
 
 .featured__controls ul li:last-child {
-	margin-right: 0;
+  margin-right: 0;
+}
+
+
+
+/*  */
+.testimonial-item {
+  display: flex;
+  align-items: center;
+}
+
+.testimonial-item .position-relative {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  width: 100%;
+}
+
+.testimonial-item img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+.testimonial-item .flex-grow-1 {
+  flex-grow: 1;
+}
+
+.testimonial-item .mb-4 {
+  margin-bottom: 15px;
+}
+
+.testimonial-item h4 {
+  margin-top: 10px;
+}
+
+
+
+
+/*  */
+/* Căn chỉnh bình luận */
+.comment-list {
+  margin-top: 30px;
+  padding: 0;
+}
+
+.comment-outer {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+/* Chỉnh sửa mỗi bình luận */
+.comment {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  padding: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.comment:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Phần tên người bình luận */
+.comment-author {
+  font-weight: bold;
+  font-size: 1.1em;
+  color: #333;
+}
+
+/* Tên người bình luận */
+.comment-author .fn {
+  color: #0073e6;
+}
+
+.comment-metadata {
+  font-size: 0.9em;
+  color: #666;
+  margin-top: 5px;
+}
+
+/* Phần nội dung bình luận */
+.comment-content {
+  font-size: 1em;
+  line-height: 1.5;
+  color: #444;
+  margin-top: 10px;
+}
+
+/* Phần bình luận trả lời */
+.comment-reply-link {
+  font-size: 0.9em;
+  color: #0073e6;
+  text-decoration: none;
+}
+
+.comment-reply-link:hover {
+  text-decoration: underline;
+}
+
+/* Phần textarea nhập bình luận */
+#comment {
+  width: 100%;
+  padding: 15px;
+  margin-top: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1em;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease-in-out;
+}
+
+#comment:focus {
+  border-color: #0073e6;
+}
+
+/* Nút gửi bình luận */
+#submit {
+  background-color: #0073e6;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+#submit:hover {
+  background-color: #005bb5;
+}
+
+/* Phần thông báo nếu không có bình luận */
+#comments .no-comments {
+  font-size: 1.2em;
+  color: #777;
+  text-align: center;
+  margin-top: 20px;
+}
+
+
+/* Nút checkout */
+.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) #respond input#submit.alt,
+.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) a.button.alt,
+.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) button.button.alt,
+.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) input.button.alt,
+:where(body:not(.woocommerce-block-theme-has-button-styles)) .woocommerce #respond input#submit.alt,
+:where(body:not(.woocommerce-block-theme-has-button-styles)) .woocommerce a.button.alt,
+:where(body:not(.woocommerce-block-theme-has-button-styles)) .woocommerce button.button.alt,
+:where(body:not(.woocommerce-block-theme-has-button-styles)) .woocommerce input.button.alt {
+  background-color: #45595b;
+}
+.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) #respond input#submit.alt:hover, .woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) a.button.alt:hover, .woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) button.button.alt:hover, .woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) input.button.alt:hover, :where(body:not(.woocommerce-block-theme-has-button-styles)) .woocommerce #respond input#submit.alt:hover, :where(body:not(.woocommerce-block-theme-has-button-styles)) .woocommerce a.button.alt:hover, :where(body:not(.woocommerce-block-theme-has-button-styles)) .woocommerce button.button.alt:hover, :where(body:not(.woocommerce-block-theme-has-button-styles)) .woocommerce input.button.alt:hover {
+  background-color: #040404;
+  color: #fff;
+}
+
+
+/*  */
+/* Tạo kiểu cho thẻ select */
+select[name="per_page"] {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 8px 16px;
+  font-size: 16px;
+  color: #333;
+  outline: none;
+  appearance: none; /* Loại bỏ các kiểu mặc định của select */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Tạo kiểu cho hover và focus */
+select[name="per_page"]:hover,
+select[name="per_page"]:focus {
+  border-color: #0056b3;
+  box-shadow: 0 0 5px rgba(0, 86, 179, 0.5);
+}
+
+/* Tạo hình dạng mũi tên tùy chỉnh cho select */
+select[name="per_page"]::after {
+  content: "▼";
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+/* Bố trí thẻ select để đẹp hơn */
+.select-container {
+  position: relative;
+  display: inline-block;
+}
+
+
+/*  */
+/* Tạo kiểu cho thẻ select */
+.woocommerce-ordering select {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 10px 16px;
+  font-size: 16px;
+  color: #333;
+  outline: none;
+  appearance: none; /* Loại bỏ các kiểu mặc định của select */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: auto;
+  max-width: 250px;
+}
+
+/* Tạo kiểu cho hover và focus */
+.woocommerce-ordering select:hover,
+.woocommerce-ordering select:focus {
+  border-color: #0056b3;
+  box-shadow: 0 0 5px rgba(0, 86, 179, 0.5);
+}
+
+/* Tạo hình dạng mũi tên tùy chỉnh cho select */
+.woocommerce-ordering select::after {
+  content: "▼";
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+/* Bao quanh thẻ select để tạo không gian cho mũi tên */
+.woocommerce-ordering {
+  position: relative;
+  display: inline-block;
+  margin: 0 10px 10px 0; /* Khoảng cách cho các phần tử khác */
+}
+
+/* Cải thiện kiểu cho các option bên trong select */
+.woocommerce-ordering select option {
+  padding: 10px;
+}
+
+
+.woocommerce:where(body:not(.woocommerce-uses-block-theme)) div.product p.price, .woocommerce:where(body:not(.woocommerce-uses-block-theme)) div.product span.price {
+  color: #000000;
+  font-size: 1.25em;
+}
+
+
+.posted_in a {
+  color: #000000;
+}
+
+
+/*  */
+.social-share-buttons {
+  display: flex;
+  justify-content: center; /* Căn giữa */
+  gap: 10px; /* Khoảng cách giữa các nút */
+  margin-top: 20px;
+}
+
+.social-share-buttons a {
+  display: inline-block;
+  padding: 10px 15px;
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.social-share-buttons a.facebook {
+  background-color: #3b5998;
+}
+
+.social-share-buttons a.twitter {
+  background-color: #1da1f2;
+}
+
+.social-share-buttons a.pinterest {
+  background-color: #bd081c;
+}
+
+.social-share-buttons a.linkedin {
+  background-color: #0077b5;
+}
+
+.social-share-buttons a:hover {
+  opacity: 0.8;
 }

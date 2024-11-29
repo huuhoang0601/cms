@@ -9,8 +9,8 @@
     ?>
  <div class="col-lg-12">
      <div class="mb-3">
-         <h4>Danh mục</h4>
-         <ul class="list-unstyled fruite-categorie rounded">
+         <h4>Danh mục Sản Phẩm</h4>
+         <ul class="list-unstyled shop-categorie rounded">
 
              <!-- lấy ra tất cả danh mục cha -->
              <?php
@@ -34,9 +34,9 @@
                     $child_categories = get_categories($child_args);
                     ?>
                  <li class="nav-item">
-                     <div class="d-flex  flex-column fruite-name">
+                     <div class="d-flex  flex-column shop-name">
                          <a
-                             class="nav-link collapsed d-flex justify-content-start fruite-name px-0 py-0"
+                             class="nav-link collapsed d-flex justify-content-start shop-name px-0 py-0"
                              href="<?php echo get_term_link($category->slug, 'product_cat'); ?>">
                              <span class="cate-parent"><?php echo $category->name; ?></span>
                          </a>
@@ -52,50 +52,7 @@
      </div>
  </div>
 
- <div class="col-lg-12 py-2">
-     <h4 class="mb-3">Sản phẩm nổi bật</h4>
-     <?php
-        $tax_query[] = array(
-            'taxonomy' => 'product_visibility',
-            'field' => 'name',
-            'terms' => 'featured',
-            'operator' => 'IN',
-        );
-        ?>
-     <?php $args = array(
-            'post_type' => 'product',
-            'posts_per_page' => 4,
-            'ignore_sticky_posts' => 1,
-            'tax_query' => $tax_query,
-            'order' => 'DESC'
-        ); ?>
-     <?php $getposts = new WP_query($args); ?>
-     <?php global $wp_query;
-        $wp_query->in_the_loop = true; ?>
-     <?php while ($getposts->have_posts()) : $getposts->the_post(); ?>
-         <?php global $product; ?>
-         <div class="d-flex align-items-center justify-content-start">
-             <div class="rounded me-2" style="width: 100px; height: 100px">
-                 <a href="<?php the_permalink(); ?>">
-                     <?php echo get_the_post_thumbnail(get_the_ID(), 'full', array('class' => 'img-fluid rounded')); ?>
-                 </a>
-             </div>
-             <div>
-                 <a href="<?php the_permalink(); ?>">
-                     <h6 class="mb-2"><?php the_title(); ?></h6>
-                 </a>
-                 <div class="d-flex mb-2">
-                     <h5 class="best-sel-price fw-bold me-2"><?php echo $product->get_price_html(); ?></h5>
-                     <!-- check xem sp nào giảm giá -->
-                     <?php if ($product->is_on_sale()) { ?>
-                         <h5 class="text-danger"><?php echo get_sale_percent($product->get_regular_price(), $product->get_sale_price()); ?>%</h5>
-                     <?php } ?>
-                 </div>
-             </div>
-         </div>
-     <?php endwhile;
-        wp_reset_postdata(); ?>
- </div>
+
 
  <div class="col-lg-12 py-2">
      <h4 class="mb-3">Các bài viết mới nhất</h4>

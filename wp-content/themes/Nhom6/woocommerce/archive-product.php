@@ -6,7 +6,7 @@ defined('ABSPATH') || exit;
 
 get_header('shop'); ?>
 <!-- bắt đầu custom giao diện -->
-<div class="container-fluid fruite pb-5">
+<div class="container-fluid shop pb-5">
 	<div class="container py-5 product-cate">
 		<div class="row">
 			<div class="col-lg-12">

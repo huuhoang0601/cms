@@ -29,7 +29,8 @@
                         <?php echo do_shortcode('[wpforms id="197"]'); ?>
                     </div>
                 </div>
-                <div class="col-lg-3"><p>Thanh toán</p>
+                <div class="col-lg-3 text-center">
+                    <p>Thanh toán</p>
                 <img src=" <?php echo get_theme_file_uri('img/payment.png') ?>" class="img-fluid" alt=""></div>
             </div>
         </div>
@@ -37,32 +38,18 @@
 </div>
 <!-- Footer End -->
 
-<!-- Copyright Start -->
 
 
 
 
-<!-- Back to Top -->
-<a href="#" class="btn btn-dark border-3 border-dark rounded-circle back-to-top"><i
-        class="fa fa-arrow-up"></i></a>
+
+
+
 
 
 <!-- Template Javascript -->
 <script src="js/main.js"></script>
 <!--Start of Tawk.to Script-->
-<script type="text/javascript">
-var Tawk_API = Tawk_API || {},
-    Tawk_LoadStart = new Date();
-(function() {
-    var s1 = document.createElement("script"),
-        s0 = document.getElementsByTagName("script")[0];
-    s1.async = true;
-    s1.src = 'https://embed.tawk.to/6745bbf02480f5b4f5a446ab/1idk6c9fe';
-    s1.charset = 'UTF-8';
-    s1.setAttribute('crossorigin', '*');
-    s0.parentNode.insertBefore(s1, s0);
-})();
-</script>
 <script>
     jQuery(document).ready(function($) {
     // Khi người dùng chọn danh mục hoặc "All"

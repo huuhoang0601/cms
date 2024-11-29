@@ -50,25 +50,12 @@
                     <?php endif; ?>
 
                     <!-- Leave a comment -->
-                    <div>
-                        <h4 class="h5 text-dark mb-3">
-                            Leave a Comment
-                        </h4>
+                    <?php
+                    if (comments_open() || get_comments_number()) :
+                        comments_template();
+                    endif;
+                    ?>
 
-                        <p class="small text-muted mb-4">
-                            Your email address will not be published. Required fields are marked *
-                        </p>
-
-                        <form>
-                            <textarea class="form-control mb-3" name="msg" rows="4" placeholder="Comment..."></textarea>
-                            <input class="form-control mb-3" type="text" name="name" placeholder="Name*">
-                            <input class="form-control mb-3" type="text" name="email" placeholder="Email*">
-                            <input class="form-control mb-3" type="text" name="website" placeholder="Website">
-                            <button class="btn btn-dark mt-3 text-light" type="submit">
-                                Post Comment
-                            </button>
-                        </form>
-                    </div>
                 </div>
             </div>
 
@@ -103,7 +90,7 @@
             ?>
                         <div class="col-md-6 col-lg-6 col-xl-4">
                             <div class="rounded position-relative post-wrap">
-                                <div class="fruite-img">
+                                <div class="shop-img">
                                     <a href="<?php the_permalink(); ?>">
                                         <img src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'full'); ?>" class="img-fluid rounded-top" alt="<?php the_title(); ?>">
                                     </a>

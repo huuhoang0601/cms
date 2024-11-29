@@ -1,7 +1,7 @@
 <?php get_header() ?>
 
 
-<div class="container-fluid fruite py-5 mt-5">
+<div class="container-fluid shop py-5 mt-5">
     <div class="container py-5">
         <div class="row">
             <div class="col-lg-12">
@@ -14,7 +14,7 @@
                                     <!-- Các thành phần của bài viết -->
                                     <div class="col-md-6 col-lg-6 col-xl-4">
                                         <div class="rounded position-relative post-wrap">
-                                            <div class="fruite-img">
+                                            <div class="shop-img">
                                                 <a href="<?php the_permalink(); ?>">
                                                     <img src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'full'); ?>" class="img-fluid rounded-top" alt="<?php the_title(); ?>">
                                                 </a>
